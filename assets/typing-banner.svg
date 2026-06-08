@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="90" viewBox="0 0 900 90">
+<style>
+  .bg{fill:#05070d}
+  .title{font-family:monospace;font-weight:700;font-size:28px;fill:#21e6ff}
+  .sub{font-family:monospace;font-size:16px;fill:#ff37c7}
+  .cursor{fill:#57ff8a;animation:blink 1s steps(1) infinite}
+  .scan{fill:url(#g);opacity:.16;animation:move 3s linear infinite}
+  @keyframes blink{50%{opacity:0}}
+  @keyframes move{from{transform:translateX(-900px)}to{transform:translateX(900px)}}
+</style>
+<defs>
+ <linearGradient id="g"><stop stop-color="#21e6ff" stop-opacity="0"/><stop offset=".5" stop-color="#21e6ff"/><stop offset="1" stop-color="#ff37c7" stop-opacity="0"/></linearGradient>
+</defs>
+<rect class="bg" width="900" height="90" rx="16"/>
+<rect x="1" y="1" width="898" height="88" rx="15" fill="none" stroke="#20344f"/>
+<text class="title" x="34" y="39">Mraprguild Speed Test</text>
+<text class="sub" x="34" y="67">Termux • Ping • Jitter • Download • Upload</text>
+<rect class="cursor" x="430" y="17" width="12" height="28"/>
+<rect class="scan" x="-900" y="0" width="900" height="90"/>
+</svg>
