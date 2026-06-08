@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>{{ app_name }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">M<span>R</span>APRGUILD</div>
+      <h1>{{ app_name }}</h1>
+      <p>Private self-hosted internet and local-network speed test</p>
+    </header>
+
+    <section class="card">
+      <div class="gauge">
+        <svg viewBox="0 0 220 130" aria-hidden="true">
+          <path class="track" d="M25 110 A85 85 0 0 1 195 110"/>
+          <path id="arc" class="arc" d="M25 110 A85 85 0 0 1 195 110"/>
+        </svg>
+        <div class="reading">
+          <strong id="speed">0.00</strong>
+          <span id="unit">Mbps</span>
+          <small id="phase">Ready</small>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <article><span>Ping</span><strong id="ping">--</strong><small>ms</small></article>
+        <article><span>Jitter</span><strong id="jitter">--</strong><small>ms</small></article>
+        <article><span>Download</span><strong id="download">--</strong><small>Mbps</small></article>
+        <article><span>Upload</span><strong id="upload">--</strong><small>Mbps</small></article>
+      </div>
+
+      <button id="start">START TEST</button>
+      <p class="status" id="status">Press Start Test to begin</p>
+    </section>
+
+    <section class="info">
+      <div><span>Client IP</span><strong id="clientIp">Loading…</strong></div>
+      <div><span>Server</span><strong id="serverName">{{ app_name }}</strong></div>
+    </section>
+
+    <footer>Built for Termux · © Mraprguild</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
